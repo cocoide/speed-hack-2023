@@ -54,7 +54,6 @@
     "sqlite3": "5.1.4",
     "throttle-debounce": "5.0.0",
     "typeorm": "0.3.11",
-    "zipcode-ja": "0.0.7",
     "zod": "3.20.6"
   },
   "devDependencies": {
