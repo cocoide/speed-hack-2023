@@ -30,7 +30,7 @@ export const ReviewList: FC<Props> = ({ reviews }) => {
         return (
           <li key={review.id} className={styles.item()} data-testid="review-list-item">
             <div className={styles.avaterImage()}>
-              <AspectRatio ratioHeight={1} ratioWidth={1}>
+              <AspectRatio heightRatio={1} widthRatio={1}>
                 <Image height={52} src={review.user.profile.avatar.filename} width={52} />
               </AspectRatio>
             </div>

@@ -51,10 +51,6 @@ export const ProductHeroImage: FC<Props> = memo(({ product, title }) => {
     loadImageAsDataURL(thumbnailFile.filename).then((dataUrl) => setImageDataUrl(dataUrl));
   }, [thumbnailFile]);
 
-  if (imageDataUrl === undefined) {
-    return null;
-  }
-
   return (
     <GetDeviceType>
       {({ deviceType }) => {
@@ -62,7 +58,7 @@ export const ProductHeroImage: FC<Props> = memo(({ product, title }) => {
           <WidthRestriction>
             <Anchor href={`/product/${product.id}`}>
               <div className={styles.container()}>
-                <AspectRatio ratioHeight={9} ratioWidth={16}>
+                <AspectRatio heightRatio={9} widthRatio={16}>
                   <img className={styles.image()} src={imageDataUrl} />
                 </AspectRatio>
 

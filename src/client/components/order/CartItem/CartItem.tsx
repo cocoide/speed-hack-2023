@@ -50,7 +50,7 @@ export const CartItem: FC<Props> = ({ item, onRemove, onUpdate }) => {
                         [styles.thumbnail__mobile()]: deviceType === DeviceType.MOBILE,
                       })}
                     >
-                      <AspectRatio ratioHeight={9} ratioWidth={16}>
+                      <AspectRatio heightRatio={9} widthRatio={16}>
                         <Image fill src={thumbnailFile.filename} />
                       </AspectRatio>
                       {activeOffer !== undefined && (

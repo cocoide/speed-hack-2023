@@ -48,7 +48,7 @@ export const OrderComplete: FC = () => {
               <div className={styles.container()}>
                 <div className={styles.notice()}>
                   <h2 className={styles.noticeHeading()}>購入が完了しました</h2>
-                  <AspectRatio ratioHeight={1} ratioWidth={2}>
+                  <AspectRatio heightRatio={1} widthRatio={2}>
                     <div className={styles.noticeDescriptionWrapper()}>
                       <p
                         className={classNames(styles.noticeDescription(), {
