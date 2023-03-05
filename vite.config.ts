@@ -1,5 +1,5 @@
 import path from 'node:path';
-
+import viteCompression from 'vite-plugin-compression';
 import react from '@vitejs/plugin-react';
 import { visualizer } from 'rollup-plugin-visualizer';
 import { defineConfig } from 'vite';
@@ -23,13 +23,12 @@ export default defineConfig(async () => {
 
   return {
     build: {
-      assetsInlineLimit: 4000,
+      assetsInlineLimit: 300,
       cssCodeSplit: true,
       cssTarget: 'es6',
       minify: true,
       rollupOptions: {
         output: {
-          experimentalMinChunkSize: 4000,
           intro: 'const ENVIRONMENT = "production";',
         },
       },
@@ -39,6 +38,7 @@ export default defineConfig(async () => {
       react(),
       topLevelAwait(),
       visualizer(),
+      viteCompression(),
       ViteEjsPlugin({
         module: '/src/client/index.tsx',
         title: '買えるオーガニック',
