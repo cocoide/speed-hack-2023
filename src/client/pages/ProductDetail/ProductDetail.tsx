@@ -1,5 +1,5 @@
 import type { FC } from 'react';
-import { Helmet } from 'react-helmet';
+import { Helmet } from 'react-helmet-async';
 import { useParams } from 'react-router-dom';
 
 import { Layout } from '../../components/application/Layout';

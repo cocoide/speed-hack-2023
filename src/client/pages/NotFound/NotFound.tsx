@@ -1,6 +1,6 @@
 import type { FC } from 'react';
 import { useEffect, useState } from 'react';
-import { Helmet } from 'react-helmet';
+import { Helmet } from 'react-helmet-async';
 
 import { Layout } from '../../components/application/Layout';
 import { loadFonts } from '../../utils/load_fonts';

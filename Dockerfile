@@ -1,4 +1,4 @@
-FROM node:18.13.0-bullseye AS build
+FROM node:18.13.0-bullseye-slim AS build
 ENV TZ Asia/Tokyo
 ENV NODE_ENV development
 

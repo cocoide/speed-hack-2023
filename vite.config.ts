@@ -23,13 +23,14 @@ export default defineConfig(async () => {
 
   return {
     build: {
-      assetsInlineLimit: 20480,
-      cssCodeSplit: false,
+      assetsInlineLimit: 4000,
+      cssCodeSplit: true,
       cssTarget: 'es6',
-      minify: false,
+      minify: true,
       rollupOptions: {
         output: {
-          experimentalMinChunkSize: 40960,
+          experimentalMinChunkSize: 4000,
+          intro: 'const ENVIRONMENT = "production";'
         },
       },
       target: 'es2015',
