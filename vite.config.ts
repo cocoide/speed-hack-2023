@@ -1,6 +1,7 @@
 import path from 'node:path';
 
 import react from '@vitejs/plugin-react';
+import { visualizer } from 'rollup-plugin-visualizer';
 import { defineConfig } from 'vite';
 import { ViteEjsPlugin } from 'vite-plugin-ejs';
 import topLevelAwait from 'vite-plugin-top-level-await';
@@ -30,7 +31,7 @@ export default defineConfig(async () => {
       rollupOptions: {
         output: {
           experimentalMinChunkSize: 4000,
-          intro: 'const ENVIRONMENT = "production";'
+          intro: 'const ENVIRONMENT = "production";',
         },
       },
       target: 'es2015',
@@ -39,6 +40,7 @@ export default defineConfig(async () => {
       react(),
       wasm(),
       topLevelAwait(),
+      visualizer(),
       ViteEjsPlugin({
         module: '/src/client/index.tsx',
         title: '買えるオーガニック',

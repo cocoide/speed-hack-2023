@@ -42,7 +42,7 @@ export const apolloClient = new ApolloClient({
       fetchPolicy: 'network-only',
     },
     watchQuery: {
-      fetchPolicy: 'network-only',
+      fetchPolicy: 'cache-and-network',
     },
   },
   link,
