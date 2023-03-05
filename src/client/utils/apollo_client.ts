@@ -14,7 +14,7 @@ const syncXhr: HttpOptions['fetch'] = (uri, options) => {
     }
 
     const request = new XMLHttpRequest();
-    request.open(method, uri.toString(), false);
+    request.open(method, uri.toString(), true);
     request.setRequestHeader('content-type', 'application/json');
     request.onload = () => {
       if (request.status >= 200 && request.status < 300) {
