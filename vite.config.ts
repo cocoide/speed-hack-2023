@@ -5,7 +5,7 @@ import { visualizer } from 'rollup-plugin-visualizer';
 import { defineConfig } from 'vite';
 import { ViteEjsPlugin } from 'vite-plugin-ejs';
 import topLevelAwait from 'vite-plugin-top-level-await';
-
+import { chunkSplitPlugin } from 'vite-plugin-chunk-split';
 import { getFileList } from './tools/get_file_list';
 
 const publicDir = path.resolve(__dirname, './public');
@@ -36,6 +36,7 @@ export default defineConfig(async () => {
     },
     plugins: [
       react(),
+      chunkSplitPlugin(),
       topLevelAwait(),
       visualizer(),
       viteCompression(),
